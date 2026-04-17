@@ -1,0 +1,2 @@
+primer y único cambio:
+quiero validar input en javascript en el siguiente archivo modificame solo lo esencial sin modificarme los id , que me aparezca el mensaje debajo del input las validaciones son las siguientes: no puede estar vacio,no maximo de 5 caracteres, no letras
