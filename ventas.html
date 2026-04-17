@@ -1,34 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Comisiones</title>
     <link rel="stylesheet" href="ventas.css">
-    <script src="ventas.js"></script>
     <script src="utils.js"></script>
+    <script src="ventas.js"></script>
 </head>
+
 <body>
 
     <div class="contenedor">
         <h1>Calculadora de Comisiones</h1>
 
-        <label>Salario Base:</label>
-        <input type="text" id="txtSueldoBase">
+        <div class="form-group">
+            <label>Salario Base</label>
+            <input type="number" id="txtSueldoBase" placeholder="Ej: 450"
+                onblur="validarInput('txtSueldoBase','error-txtSueldoBase')">
+            <small id="error-txtSueldoBase"></small>
 
-        <label>Número de ventas:</label>
-        <input type="text" id="txtVentas">
+        </div>
 
-        <label>Precio del producto:</label>
-        <input type="text" id="txtPrecio">
+        <div class="form-group">
+            <label>Número de ventas</label>
+            <input type="number" id="txtVentas" placeholder="Ej: 10"
+                onblur="validarInput('txtVentas','error-txtVentas')">
+            <small id="error-txtVentas"></small>
+        </div>
+
+        <div class="form-group">
+            <label>Precio del producto</label>
+            <input type="number" id="txtPrecio" placeholder="Ej: 25"
+                onblur="validarInput('txtPrecio','error-txtPrecio')">
+            <small id="error-txtPrecio"></small>
+        </div>
 
         <button onclick="calcular();">Calcular Comisión</button>
 
-        <h2>Resultados</h2>
-        <p>Salario Base: <span id="spSueldoBase"></span></p>
-        <p>Comisión: <span id="spComision"></span></p>
-        <p>Total: <span id="spTotal"></span></p>
+        <div class="resultados">
+            <h2>Resultados</h2>
+            <p>Salario Base: <span id="spSueldoBase"></span></p>
+            <p>Comisión: <span id="spComision"></span></p>
+            <p>Total: <span id="spTotal"></span></p>
+        </div>
     </div>
 
-    
+    <script src="ventas.js"></script>
+    <script src="utils.js"></script>
+
 </body>
+
 </html>
